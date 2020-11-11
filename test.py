@@ -19,5 +19,5 @@ def test_switching_theme():
 
 def test_available_currencies():
     currencies = driver.find_element_by_xpath('/html/body/div[1]/div/div/div[1]/div/div/div[2]/div[2]/div/div[1]/button/span').click()
-    count =  (len(driver.find_elements_by_class_name('select-list__item')))
+    count = (len(driver.find_elements_by_class_name('select-list__item')))
     assert count == 16
