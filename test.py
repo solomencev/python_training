@@ -1,4 +1,4 @@
-from random import random
+
 from selenium.webdriver.chrome.webdriver import WebDriver
 
 driver = WebDriver(executable_path=r'C://Python39/chromedriver.exe')
