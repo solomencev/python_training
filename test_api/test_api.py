@@ -14,3 +14,8 @@ def test_get_check_title_for_first():
     response = requests.get('https://jsonplaceholder.typicode.com/posts')
     body = response.json()
     assert body[0]['title'] == 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit'
+
+def test_get_check_return_all_records():
+    response = requests.get('https://jsonplaceholder.typicode.com/posts')
+    body = response.json()
+    assert len(body) == 100
