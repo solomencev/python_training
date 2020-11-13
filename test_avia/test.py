@@ -1,4 +1,3 @@
-
 from selenium.webdriver.chrome.webdriver import WebDriver
 
 driver = WebDriver(executable_path=r'C://Python39/chromedriver.exe')
@@ -40,3 +39,14 @@ def test_names_services():
 
     business = driver.find_element_by_xpath('//*[@title="Для бизнеса"]').text
     assert business == 'Для бизнеса\nB2B'
+
+def test_fields():
+    driver.find_element_by_id('origin').clear()
+    driver.find_element_by_id('origin').click()
+    driver.find_element_by_id('origin').send_keys('Москва')
+
+    driver.find_element_by_id('destination').click()
+    driver.find_element_by_id('destination').send_keys('Лондон')
+
+    driver.find_element_by_class_name('trip-duration__date-input').click()
+    driver.find_element_by_class_name('trip-duration__input-wrapper').click()
