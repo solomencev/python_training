@@ -9,3 +9,8 @@ def test_get_check_content_type_equals_json():
     response = requests.get('https://jsonplaceholder.typicode.com/posts')
     print(response.headers)
     assert response.headers['Content-Type'] == 'application/json; charset=utf-8'
+
+def test_get_check_title_for_first():
+    response = requests.get('https://jsonplaceholder.typicode.com/posts')
+    body = response.json()
+    assert body[0]['title'] == 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit'
